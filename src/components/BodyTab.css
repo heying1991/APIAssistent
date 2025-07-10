@@ -1,0 +1,138 @@
+.body-tab {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.body-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.body-type-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.body-type-selector label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.body-type-select {
+  padding: 8px 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.body-type-select:focus {
+  outline: none;
+  border: 2px solid var(--border-color);
+  box-shadow: none;
+}
+
+.body-type-select:hover {
+  border: 2px solid var(--border-color);
+  background: var(--bg-quaternary);
+}
+
+.body-content {
+  flex: 1;
+  min-height: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-textarea {
+  width: 100%;
+  height: 300px;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 200px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.body-textarea:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background: var(--bg-secondary);
+}
+
+.body-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.body-templates {
+  border-top: 1px solid var(--border-light);
+  padding-top: 20px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.body-templates h4 {
+  margin: 0 0 12px 0;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.template-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.template-btn {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.template-btn:hover {
+  background-color: var(--accent-light);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-1px);
+} 

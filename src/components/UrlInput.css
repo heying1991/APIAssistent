@@ -1,0 +1,46 @@
+.url-input-container {
+  flex: 1;
+  position: relative;
+}
+
+.url-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.url-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-light);
+  background: var(--bg-tertiary);
+}
+
+.url-input::placeholder {
+  color: var(--text-muted);
+}
+
+.url-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.base-host-indicator {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 12px;
+  color: var(--accent-color);
+  background: var(--accent-light);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow);
+} 

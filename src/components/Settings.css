@@ -1,0 +1,425 @@
+.settings-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.settings-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.settings-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.settings-header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.settings-section {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.settings-section:hover {
+  box-shadow: var(--shadow-hover);
+  /* transform: translateY(-2px); */
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: var(--text-primary);
+}
+
+.section-header p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* 统一设置页面字体和高度，防止中英文切换抖动 */
+.settings-header h2,
+.settings-header p,
+.section-header h3,
+.section-header p,
+.language-option,
+.theme-option,
+.btn,
+.setting-name,
+.setting-description {
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.language-option,
+.theme-option {
+  min-height: 56px;
+  height: 56px;
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+}
+
+.btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+}
+
+.settings-header h2 {
+  font-size: 32px !important;
+  line-height: 1.2 !important;
+  font-weight: 700;
+}
+
+.section-header h3 {
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+  font-weight: 600;
+}
+
+.settings-header p,
+.section-header p {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  font-weight: 400;
+}
+
+.setting-name {
+  font-size: 16px !important;
+  font-weight: 600;
+}
+
+.setting-description {
+  font-size: 14px !important;
+  font-weight: 400;
+}
+
+/* 语言设置 */
+.language-options {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 180px; /* 固定宽度，防止抖动 */
+  position: relative;
+  background: var(--bg-secondary);
+  flex-shrink: 0; /* 防止收缩 */
+}
+
+.language-option:hover {
+  border-color: var(--accent-color);
+  background: var(--accent-light);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  /* transform: translateY(-2px); */
+}
+
+.language-option.active {
+  border-color: var(--accent-color);
+  background: var(--accent-light);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  /* transform: translateY(-2px); */
+}
+
+.language-flag {
+  font-size: 24px;
+  flex-shrink: 0; /* 防止图标收缩 */
+}
+
+.language-info {
+  flex: 1;
+  min-width: 0; /* 允许文本收缩 */
+}
+
+.language-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  white-space: nowrap; /* 防止换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.language-code {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  white-space: nowrap; /* 防止换行 */
+}
+
+.language-check {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 16px;
+  flex-shrink: 0; /* 防止勾选图标收缩 */
+  width: 16px; /* 固定宽度 */
+  text-align: center;
+}
+
+/* 主题设置 */
+.theme-options {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 240px; /* 固定宽度，防止抖动 */
+  position: relative;
+  background: var(--bg-secondary);
+  flex-shrink: 0; /* 防止收缩 */
+}
+
+.theme-option:hover {
+  border-color: var(--accent-color);
+  background: var(--accent-light);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  /* transform: translateY(-2px); */
+}
+
+.theme-option.active {
+  border-color: var(--accent-color);
+  background: var(--accent-light);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  /* transform: translateY(-2px); */
+}
+
+.theme-icon {
+  font-size: 24px;
+  flex-shrink: 0; /* 防止图标收缩 */
+}
+
+.theme-info {
+  flex: 1;
+  min-width: 0; /* 允许文本收缩 */
+}
+
+.theme-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  white-space: nowrap; /* 防止换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-description {
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap; /* 防止换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-check {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 16px;
+  flex-shrink: 0; /* 防止勾选图标收缩 */
+  width: 16px; /* 固定宽度 */
+  text-align: center;
+}
+
+/* 其他设置 */
+.other-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-info {
+  flex: 1;
+  min-width: 0; /* 允许文本收缩 */
+}
+
+.setting-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  white-space: nowrap; /* 防止换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.setting-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  white-space: nowrap; /* 防止换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 开关样式 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* 设置操作按钮 */
+.settings-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  /* transform: translateY(-2px); */
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-quaternary);
+  /* transform: translateY(-2px); */
+}
+
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 16px;
+  }
+  
+  .language-options,
+  .theme-options {
+    flex-direction: column;
+  }
+  
+  .language-option,
+  .theme-option {
+    width: 100%; /* 在移动端占满宽度 */
+    min-width: auto;
+  }
+  
+  .settings-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+} 

@@ -1,0 +1,55 @@
+.method-selector {
+  padding: 12px 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  min-width: 100px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.method-selector:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-light);
+  background: var(--bg-tertiary);
+}
+
+.method-selector:hover {
+  border-color: var(--accent-color);
+  background: var(--bg-tertiary);
+  /* 移除浮动效果，去掉 transform */
+}
+
+.method-selector option {
+  font-weight: 600;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  padding: 8px;
+}
+
+/* 方法颜色 */
+.method-selector option[value="GET"] {
+  color: var(--success-color);
+}
+
+.method-selector option[value="POST"] {
+  color: var(--accent-color);
+}
+
+.method-selector option[value="PUT"] {
+  color: var(--warning-color);
+}
+
+.method-selector option[value="DELETE"] {
+  color: var(--danger-color);
+}
+
+.method-selector option[value="PATCH"] {
+  color: var(--info-color);
+} 
